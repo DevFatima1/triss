@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRISS — القائمة</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- مشاركة/سوشيال -->
+  <meta property="og:title" content="TRISS — It will make your life sweet">
+  <meta property="og:description" content="كوكيز • نوبتنو • قهوة — جربي الطعم اللي يدوّخ!">
+  <meta property="og:image" content="trissHeader.png">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+
+  <!-- الهيدر -->
+  <header class="site-header">
+    <div class="brand center-brand">
+      <img src="trisLogo.png" alt="TRISS Logo" class="logo" />
+      <p class="brand-tag">It will make your life sweet</p>
+    </div>
+
+    <button class="cart-btn" id="cartBtn" aria-label="السلة" onclick="openCart()">
+      <span>السلة</span>
+      <span class="badge" data-cart-badge>0</span>
+    </button>
+  </header>
+
+  <!-- موجة زخرفية -->
+  <div class="wave-top"></div>
+
+  <!-- سلة (سحّاب) -->
+  <div id="cartOverlay" class="cart-overlay" hidden></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-hidden="true" dir="rtl">
+    <header class="cart-head">
+      <h4>السلة</h4>
+      <button class="cart-close" id="cartCloseBtn" aria-label="إغلاق">×</button>
+    </header>
+
+    <div id="cartList" class="cart-list"></div>
+
+    <footer class="cart-foot">
+      <div class="cart-row">
+        <span>الإجمالي</span>
+        <strong id="cartTotal">0 ريال</strong>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary w-100">إتمام الطلب بالواتساب</button>
+    </footer>
+  </aside>
+
+  <main id="app">
+  <!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="trissHeader.png" alt="TRISS hero">
+
+  <div class="hero-text">
+    <h1>قهوتك وحلاك... بطابع TRISS</h1>
+    <p>كوكيز • بودينق • قهوة</p>
+  </div>
+
+  <div class="hero-btn">
+    <button class="cta">تصفّح القائمة</button>
+  </div>
+</section>
+
+
+    </section>
+
+    <!-- الأكثر مبيعًا -->
+    <h3 class="section-head">الأكثر مبيعًا</h3>
+    <section id="popularRow" class="hscroll" aria-label="الأكثر مبيعًا"></section>
+
+    <!-- التصنيفات الكبيرة -->
+    <section class="big-cats" id="categories">
+      <button class="big-cat-card cat-card" data-cat="كوكيز">
+        <div class="big-cat-media" style="--img:url('trissCookies.jpg')"></div>
+        <div class="big-cat-info">
+          <span class="big-cat-emoji">🍪</span>
+          <span class="big-cat-title">كوكيز</span>
+          <span class="big-cat-sub">قطعة • بوكس • كيكة</span>
+        </div>
+      </button>
+
+      <button class="big-cat-card cat-card" data-cat="بودينق">
+        <div class="big-cat-media" style="--img:url('trissPudding.jpg')"></div>
+        <div class="big-cat-info">
+          <span class="big-cat-emoji">🍰</span>
+          <span class="big-cat-title">بودنق</span>
+          <span class="big-cat-sub">بودينق/ترايفل بنكهات</span>
+        </div>
+      </button>
+
+      <button class="big-cat-card cat-card" data-cat="قهوة">
+        <div class="big-cat-media" style="--img:url('trissV60.jpg')"></div>
+        <div class="big-cat-info">
+          <span class="big-cat-emoji">☕</span>
+          <span class="big-cat-title">قهوة</span>
+          <span class="big-cat-sub">V60 حار/بارد + بوكس</span>
+        </div>
+      </button>
+    </section>
+
+    <!-- عنوان الشبكة -->
+    <h3 class="section-head" id="productsTitle">كل المنتجات</h3>
+
+    <!-- شبكة المنتجات -->
+    <section class="product-grid" id="productGrid" aria-live="polite"></section>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite">أُضيف للسلّة</div>
+  </main>
+
+  <!-- أزرار تواصل عائمة -->
+  <a class="ig-fab"
+     href="https://www.instagram.com/trisss_sa/"
+     target="_blank" rel="noopener"
+     aria-label="Instagram @trisss_sa">IG</a>
+
+  <a class="wa-fab"
+     href="https://wa.me/966534245696"
+     target="_blank" rel="noopener"
+     aria-label="WhatsApp">WA</a>
+
+  <a class="tt-fab"
+     href="https://www.tiktok.com/@trisss.sa"
+     target="_blank" rel="noopener"
+     aria-label="TikTok @trisss.sa">TT</a>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+
+  <footer class="site-footer">
+  <p>تمت برمجته بواسطة</p>
+  <img src="MyLogo.png" alt="شعار TRISS" class="footer-logo">
+</footer>
+
+</body>
+</html>
